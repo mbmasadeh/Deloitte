@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="StagingETL"
   DTS:PackageType="5"
-  DTS:VersionBuild="17"
-  DTS:VersionGUID="{6CD316F0-8CDC-45D3-BE4B-41875CB82E5E}">
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{33124949-2DF5-4F74-844F-26F3D018872E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,10 +29,10 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{7FA1DBC2-A2F7-48C7-9F10-B0846DE8BFD3}"
-      DTS:ObjectName="Flat File Connection Manager">
+      DTS:refId="Package.ConnectionManagers[MultiFlatConnection]"
+      DTS:CreationName="MULTIFLATFILE"
+      DTS:DTSID="{835BF719-116B-4A17-AF28-8BE153177433}"
+      DTS:ObjectName="MultiFlatConnection">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -42,7 +42,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Data\201901_Orders_2019_02_04_15_41_32.csv">
+          DTS:ConnectionString="C:\Data\*.CSV">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -51,7 +51,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Row ID"
-              DTS:DTSID="{C32B0ACB-7B62-40B7-9204-2067419ABBDB}"
+              DTS:DTSID="{3EC0F110-DFA2-49EB-8BD9-5BD066B53325}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -60,7 +60,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Order ID"
-              DTS:DTSID="{1B1D04AD-D265-4620-BF9D-5461AFD47BAD}"
+              DTS:DTSID="{63CA6763-6358-4F2D-8110-8B4CAD9D1DC7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -69,7 +69,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Order Date"
-              DTS:DTSID="{FA0A75FF-1C6F-4242-B6AF-789C21311CDE}"
+              DTS:DTSID="{2BB79171-6C38-43DB-9540-ADA202A30F3A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -78,7 +78,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Ship Date"
-              DTS:DTSID="{AA07641A-1E04-409C-AD43-4C023FDA1F45}"
+              DTS:DTSID="{5ED6C9F3-E66A-4475-BED8-67DC22F34C1B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -87,7 +87,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Ship Mode"
-              DTS:DTSID="{B868AD4A-3D3B-4BF3-954F-FB486F2EC9F8}"
+              DTS:DTSID="{846D2C79-1F2B-427D-A6E5-9D1A7B0971AF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -96,7 +96,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Customer ID"
-              DTS:DTSID="{08B88C0A-B410-499F-AC34-CFDF055E37AF}"
+              DTS:DTSID="{86DFD817-DCD3-484D-B043-4CCC56E16BB9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -105,7 +105,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Customer Name"
-              DTS:DTSID="{472A26B2-BAEC-44E8-8B23-2763CD605684}"
+              DTS:DTSID="{CBD3A21F-5187-48E4-828B-4A0D41EE5EEE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -114,7 +114,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Segment"
-              DTS:DTSID="{4B29F532-7905-431C-84C3-84E2DC8357EB}"
+              DTS:DTSID="{678B541E-3F59-49D6-BA9D-6C729F9694EA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -123,7 +123,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Country"
-              DTS:DTSID="{FEFCF6E6-C705-4575-B85B-ADAAFB339322}"
+              DTS:DTSID="{1CFC7EE2-45F3-486E-B138-0C6BB0A50DDC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -132,7 +132,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="City"
-              DTS:DTSID="{A8EC2718-E54F-4F82-B42F-84BE7DAFEEB0}"
+              DTS:DTSID="{88896444-65D3-4BEC-9E17-0E7B898A473F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -141,7 +141,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="State"
-              DTS:DTSID="{CC3C7488-E57C-4E1B-98D2-0A76E36012CF}"
+              DTS:DTSID="{C1C0040F-C496-451C-8D33-C2E1734B9824}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -150,7 +150,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Postal Code"
-              DTS:DTSID="{AFCB66F9-34DB-462E-AD64-E7C053FA4F2F}"
+              DTS:DTSID="{A7349575-0FA0-437D-B719-905FFE24AFB3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -159,7 +159,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Region"
-              DTS:DTSID="{D73B8282-6D3C-4CC8-BFC2-C34EEEEFD9FF}"
+              DTS:DTSID="{5CC19135-E121-40D1-AD2D-31BDB554BAA0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -168,7 +168,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Product ID"
-              DTS:DTSID="{08B735C2-F849-4F46-A956-BCE6986C17B7}"
+              DTS:DTSID="{F1412BF1-C4D0-44E4-B940-4E7B07EE13CF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -177,7 +177,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Category"
-              DTS:DTSID="{783C38D3-ED82-4346-90A3-7ADDDAB6A900}"
+              DTS:DTSID="{CFC41AB1-E3E8-479A-864E-8A40F1FF11BA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -186,15 +186,16 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Sub-Category"
-              DTS:DTSID="{50684C70-E52D-4479-87DC-D595F3C0CDB0}"
+              DTS:DTSID="{B1552983-E64D-4559-989F-7B6206ABD707}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x007C_"
-              DTS:DataType="302"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Product Name"
-              DTS:DTSID="{F6E1D204-3472-4A9C-84AE-4E3269B6DDCE}"
+              DTS:DTSID="{93FC35FC-1DB1-4DC6-854F-6F29FC1CFB6A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -203,7 +204,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Sales"
-              DTS:DTSID="{88AC3707-9407-4504-BC92-FBC148ED1C03}"
+              DTS:DTSID="{438FE887-CB28-4824-9790-F136DAA9F076}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -212,7 +213,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Quantity"
-              DTS:DTSID="{81216F8C-6FE8-45B4-983C-648D9E5BB4A7}"
+              DTS:DTSID="{9D02BE83-E105-4C6D-B8C8-1476838C4C1A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -221,7 +222,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Discount"
-              DTS:DTSID="{F18915A8-2477-4E6B-AF5C-A69844C26164}"
+              DTS:DTSID="{23C59579-84CE-4E14-A503-05BBC3891C68}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -230,7 +231,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Profit"
-              DTS:DTSID="{EF3A303A-E535-4ED2-9922-2B3CF639D39D}"
+              DTS:DTSID="{17306652-BCE6-4A2E-91DD-BFE24CB94C3D}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -240,13 +241,13 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\201901_Orders_2019_02_01_03_10_55"
+      DTS:refId="Package\Read All CSV Files"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{063C0A16-AFD5-419A-A49E-CF56EB4B09FF}"
+      DTS:DTSID="{DF639BBA-4E6D-467A-ADDE-CE9CB821A53B}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="201901_Orders_2019_02_01_03_10_55"
+      DTS:ObjectName="Read All CSV Files"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -254,7 +255,7 @@
           version="1">
           <components>
             <component
-              refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion"
+              refId="Package\Read All CSV Files\Data Conversion"
               componentClassID="Microsoft.DataConvert"
               contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Data Conversion"
@@ -262,111 +263,139 @@
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Inputs[Data Conversion Input]"
+                  refId="Package\Read All CSV Files\Data Conversion.Inputs[Data Conversion Input]"
                   name="Data Conversion Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Inputs[Data Conversion Input].Columns[Order ID]"
+                      refId="Package\Read All CSV Files\Data Conversion.Inputs[Data Conversion Input].Columns[Row ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Row ID"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Row ID]" />
+                    <inputColumn
+                      refId="Package\Read All CSV Files\Data Conversion.Inputs[Data Conversion Input].Columns[Order ID]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Order ID"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Order ID]" />
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Order ID]" />
                     <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Inputs[Data Conversion Input].Columns[Ship Mode]"
+                      refId="Package\Read All CSV Files\Data Conversion.Inputs[Data Conversion Input].Columns[Ship Mode]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Ship Mode"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Ship Mode]" />
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Ship Mode]" />
                     <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Inputs[Data Conversion Input].Columns[Customer ID]"
+                      refId="Package\Read All CSV Files\Data Conversion.Inputs[Data Conversion Input].Columns[Customer ID]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Customer ID"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Customer ID]" />
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Customer ID]" />
                     <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Inputs[Data Conversion Input].Columns[Segment]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Segment"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Segment]" />
-                    <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Inputs[Data Conversion Input].Columns[Country]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Country"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Country]" />
-                    <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Inputs[Data Conversion Input].Columns[Customer Name]"
+                      refId="Package\Read All CSV Files\Data Conversion.Inputs[Data Conversion Input].Columns[Customer Name]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Customer Name"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Customer Name]" />
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Customer Name]" />
                     <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Inputs[Data Conversion Input].Columns[City]"
+                      refId="Package\Read All CSV Files\Data Conversion.Inputs[Data Conversion Input].Columns[Segment]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Segment"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Segment]" />
+                    <inputColumn
+                      refId="Package\Read All CSV Files\Data Conversion.Inputs[Data Conversion Input].Columns[Country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Country"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Read All CSV Files\Data Conversion.Inputs[Data Conversion Input].Columns[City]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="City"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[City]" />
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[City]" />
                     <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Inputs[Data Conversion Input].Columns[State]"
+                      refId="Package\Read All CSV Files\Data Conversion.Inputs[Data Conversion Input].Columns[State]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="State"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[State]" />
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[State]" />
                     <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Inputs[Data Conversion Input].Columns[Region]"
+                      refId="Package\Read All CSV Files\Data Conversion.Inputs[Data Conversion Input].Columns[Region]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Region"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Region]" />
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Region]" />
                     <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Inputs[Data Conversion Input].Columns[Sub-Category]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Sub-Category"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Sub-Category]" />
-                    <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Inputs[Data Conversion Input].Columns[Category]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Category"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Category]" />
-                    <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Inputs[Data Conversion Input].Columns[Product ID]"
+                      refId="Package\Read All CSV Files\Data Conversion.Inputs[Data Conversion Input].Columns[Product ID]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Product ID"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Product ID]" />
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Product ID]" />
+                    <inputColumn
+                      refId="Package\Read All CSV Files\Data Conversion.Inputs[Data Conversion Input].Columns[Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Category"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\Read All CSV Files\Data Conversion.Inputs[Data Conversion Input].Columns[Sub-Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Sub-Category"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Sub-Category]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output]"
+                  refId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output]"
                   exclusionGroup="1"
                   name="Data Conversion Output"
-                  synchronousInputId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Inputs[Data Conversion Input]">
+                  synchronousInputId="Package\Read All CSV Files\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Order ID]"
+                      refId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Row ID]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Order ID]"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Row ID]"
+                      name="Copy of Row ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Row ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Order ID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Order ID]"
                       name="Copy of Order ID"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -374,7 +403,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Order ID]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Order ID]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -382,12 +411,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Ship Mode]"
+                      refId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Ship Mode]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Ship Mode]"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Ship Mode]"
                       name="Copy of Ship Mode"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -395,7 +424,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Ship Mode]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Ship Mode]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -403,12 +432,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Customer ID]"
+                      refId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Customer ID]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Customer ID]"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Customer ID]"
                       name="Copy of Customer ID"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -416,7 +445,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Customer ID]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Customer ID]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -424,54 +453,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Segment]"
+                      refId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Customer Name]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Segment]"
-                      name="Copy of Segment"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Segment]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Country]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Country]"
-                      name="Copy of Country"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Country]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Customer Name]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Customer Name]"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Customer Name]"
                       name="Copy of Customer Name"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -479,7 +466,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Customer Name]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Customer Name]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -487,12 +474,54 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]"
+                      refId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Segment]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Segment]"
+                      name="Copy of Segment"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Segment]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Country]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Country]"
+                      name="Copy of Country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Country]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]"
                       name="Copy of City"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -500,7 +529,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[City]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[City]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -508,12 +537,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of State]"
+                      refId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of State]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of State]"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of State]"
                       name="Copy of State"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -521,7 +550,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[State]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[State]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -529,12 +558,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Region]"
+                      refId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Region]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Region]"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Region]"
                       name="Copy of Region"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -542,7 +571,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Region]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Region]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -550,54 +579,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Sub-Category]"
+                      refId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Product ID]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Sub-Category]"
-                      name="Copy of Sub-Category"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Sub-Category]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Category]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Category]"
-                      name="Copy of Category"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Category]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Product ID]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Product ID]"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Product ID]"
                       name="Copy of Product ID"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -605,7 +592,49 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Product ID]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Product ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Category]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Category]"
+                      name="Copy of Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Category]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Sub-Category]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Sub-Category]"
+                      name="Copy of Sub-Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Sub-Category]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -616,22 +645,22 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Error Output]"
+                  refId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Data Conversion Error Output"
-                  synchronousInputId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Inputs[Data Conversion Input]">
+                  synchronousInputId="Package\Read All CSV Files\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      refId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      refId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -640,12 +669,12 @@
               </outputs>
             </component>
             <component
-              refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source"
+              refId="Package\Read All CSV Files\Multi Flat files"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
               localeId="1033"
-              name="Flat File Source"
+              name="Multi Flat files"
               usesDispositions="true"
               version="1">
               <properties>
@@ -660,25 +689,25 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  refId="Package\Read All CSV Files\Multi Flat files.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MultiFlatConnection]"
+                  connectionManagerRefId="Package.ConnectionManagers[MultiFlatConnection]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output]"
+                  refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output]"
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Row ID]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Row ID]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Row ID]"
+                      externalMetadataColumnId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Row ID]"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Row ID]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Row ID]"
                       name="Row ID"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -693,14 +722,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Order ID]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Order ID]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Order ID]"
+                      externalMetadataColumnId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Order ID]"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Order ID]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Order ID]"
                       name="Order ID"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -715,14 +744,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Order Date]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Order Date]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Order Date]"
+                      externalMetadataColumnId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Order Date]"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Order Date]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Order Date]"
                       name="Order Date"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -737,14 +766,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Ship Date]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Ship Date]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ship Date]"
+                      externalMetadataColumnId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Ship Date]"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Ship Date]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Ship Date]"
                       name="Ship Date"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -759,14 +788,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Ship Mode]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Ship Mode]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ship Mode]"
+                      externalMetadataColumnId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Ship Mode]"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Ship Mode]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Ship Mode]"
                       name="Ship Mode"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -781,14 +810,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Customer ID]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Customer ID]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Customer ID]"
+                      externalMetadataColumnId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Customer ID]"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Customer ID]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Customer ID]"
                       name="Customer ID"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -803,14 +832,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Customer Name]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Customer Name]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Customer Name]"
+                      externalMetadataColumnId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Customer Name]"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Customer Name]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Customer Name]"
                       name="Customer Name"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -825,14 +854,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Segment]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Segment]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Segment]"
+                      externalMetadataColumnId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Segment]"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Segment]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Segment]"
                       name="Segment"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -847,14 +876,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Country]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Country]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                      externalMetadataColumnId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Country]"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Country]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Country]"
                       name="Country"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -869,14 +898,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[City]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[City]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[City]"
+                      externalMetadataColumnId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[City]"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[City]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[City]"
                       name="City"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -891,14 +920,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[State]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[State]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[State]"
+                      externalMetadataColumnId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[State]"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[State]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[State]"
                       name="State"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -913,14 +942,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Postal Code]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Postal Code]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Postal Code]"
+                      externalMetadataColumnId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Postal Code]"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Postal Code]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Postal Code]"
                       name="Postal Code"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -935,14 +964,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Region]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Region]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Region]"
+                      externalMetadataColumnId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Region]"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Region]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Region]"
                       name="Region"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -957,14 +986,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Product ID]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Product ID]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Product ID]"
+                      externalMetadataColumnId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Product ID]"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Product ID]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Product ID]"
                       name="Product ID"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -979,14 +1008,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Category]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Category]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      externalMetadataColumnId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Category]"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Category]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Category]"
                       name="Category"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1001,14 +1030,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Sub-Category]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Sub-Category]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sub-Category]"
+                      externalMetadataColumnId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Sub-Category]"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Sub-Category]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Sub-Category]"
                       name="Sub-Category"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1023,14 +1052,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Sales]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Sales]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sales]"
+                      externalMetadataColumnId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Sales]"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Sales]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Sales]"
                       name="Sales"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1045,14 +1074,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Quantity]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Quantity]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Quantity]"
+                      externalMetadataColumnId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Quantity]"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Quantity]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Quantity]"
                       name="Quantity"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1067,14 +1096,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Discount]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Discount]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Discount]"
+                      externalMetadataColumnId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Discount]"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Discount]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Discount]"
                       name="Discount"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1089,14 +1118,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Profit]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Profit]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Profit]"
+                      externalMetadataColumnId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Profit]"
                       length="50"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Profit]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Profit]"
                       name="Profit"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1114,126 +1143,127 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Row ID]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Row ID]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Row ID" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Order ID]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Order ID]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Order ID" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Order Date]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Order Date]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Order Date" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ship Date]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Ship Date]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Ship Date" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ship Mode]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Ship Mode]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Ship Mode" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Customer ID]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Customer ID]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Customer ID" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Customer Name]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Customer Name]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Customer Name" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Segment]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Segment]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Segment" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Country]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Country" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[City]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[City]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="City" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[State]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[State]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="State" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Postal Code]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Postal Code]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Postal Code" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Region]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Region]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Region" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Product ID]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Product ID]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Product ID" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Category]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Category" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sub-Category]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Sub-Category]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Sub-Category" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Product Name]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Product Name]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="Product Name" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sales]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Sales]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Sales" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Quantity]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Quantity]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Quantity" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Discount]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Discount]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Discount" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Profit]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].ExternalColumns[Profit]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -1241,27 +1271,27 @@
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Error Output]"
+                  refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
                   name="Flat File Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       codePage="1252"
                       dataType="text"
                       description="Flat File Source Error Output Column"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       name="Flat File Source Error Output Column" />
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1270,11 +1300,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging"
+              refId="Package\Read All CSV Files\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="To Staging"
+              name="OLE DB Destination"
               usesDispositions="true"
               version="4">
               <properties>
@@ -1319,15 +1349,15 @@
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                  name="FastLoadOptions">CHECK_CONSTRAINTS,ROWS_PER_BATCH = 10000</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  name="FastLoadMaxInsertCommitSize">100000</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Connections[OleDbConnection]"
+                  refId="Package\Read All CSV Files\OLE DB Destination.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[bistaging\bistaging.BiStagingDB]"
                   connectionManagerRefId="Package.ConnectionManagers[bistaging\bistaging.BiStagingDB]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1335,256 +1365,247 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input]"
+                  refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].Columns[Sales]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sales]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Sales"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[SALES]"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Sales]" />
+                      externalMetadataColumnId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SALES]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Sales]" />
                     <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].Columns[Quantity]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Quantity]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Quantity"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[QUANTITY]"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Quantity]" />
+                      externalMetadataColumnId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[QUANTITY]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Quantity]" />
                     <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].Columns[Discount]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Discount]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Discount"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[DISCOUNT]"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Discount]" />
+                      externalMetadataColumnId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DISCOUNT]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Discount]" />
                     <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].Columns[Profit]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Profit]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Profit"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[PROFIT]"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Profit]" />
+                      externalMetadataColumnId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PROFIT]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Profit]" />
                     <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].Columns[Order Date]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Row ID]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of Row ID"
+                      externalMetadataColumnId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ROWID]"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Row ID]" />
+                    <inputColumn
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Order ID]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of Order ID"
+                      externalMetadataColumnId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ORDER_ID]"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Order ID]" />
+                    <inputColumn
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Order Date]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Order Date"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[ORDER_DATE]"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Order Date]" />
+                      externalMetadataColumnId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ORDER_DATE]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Order Date]" />
                     <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].Columns[Ship Date]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Ship Date]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Ship Date"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[SHIP_DATE]"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Ship Date]" />
+                      externalMetadataColumnId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SHIP_DATE]"
+                      lineageId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output].Columns[Ship Date]" />
                     <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].Columns[Postal Code]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Postal Code"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[POSTAL_CODE]"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Postal Code]" />
-                    <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].Columns[Row ID]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Row ID"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[ROWID]"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output].Columns[Row ID]" />
-                    <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].Columns[Copy of Order ID]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Copy of Order ID"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[ORDER_ID]"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Order ID]" />
-                    <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].Columns[Copy of Ship Mode]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Ship Mode]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Copy of Ship Mode"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[SHIP_MODE]"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Ship Mode]" />
+                      externalMetadataColumnId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SHIP_MODE]"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Ship Mode]" />
                     <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].Columns[Copy of Customer ID]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Customer ID]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Copy of Customer ID"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[CUSTOMER_ID]"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Customer ID]" />
+                      externalMetadataColumnId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CUSTOMER_ID]"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Customer ID]" />
                     <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].Columns[Copy of Customer Name]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Copy of Customer Name"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[CUSTOMER_NAME]"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Customer Name]" />
-                    <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].Columns[Copy of Segment]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Copy of Segment"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[SEGMENT]"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Segment]" />
-                    <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].Columns[Copy of Sub-Category]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Copy of Sub-Category"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[SUB_CATEGORY]"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Sub-Category]" />
-                    <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].Columns[Copy of Country]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Copy of Country"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[COUNTRY]"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Country]" />
-                    <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].Columns[Copy of City]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Copy of City"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[CITY]"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]" />
-                    <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].Columns[Copy of State]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Copy of State"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[STATE]"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of State]" />
-                    <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].Columns[Copy of Region]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Copy of Region"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[REGION]"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Region]" />
-                    <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].Columns[Copy of Category]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Copy of Category"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[CATEGORY]"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Category]" />
-                    <inputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].Columns[Copy of Product ID]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Product ID]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Copy of Product ID"
-                      externalMetadataColumnId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[PRODUCT_ID]"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Product ID]" />
+                      externalMetadataColumnId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PRODUCT_ID]"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Product ID]" />
+                    <inputColumn
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Customer Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of Customer Name"
+                      externalMetadataColumnId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CUSTOMER_NAME]"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Customer Name]" />
+                    <inputColumn
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Segment]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of Segment"
+                      externalMetadataColumnId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SEGMENT]"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Segment]" />
+                    <inputColumn
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Category]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of Category"
+                      externalMetadataColumnId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CATEGORY]"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Category]" />
+                    <inputColumn
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Sub-Category]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of Sub-Category"
+                      externalMetadataColumnId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SUB_CATEGORY]"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Sub-Category]" />
+                    <inputColumn
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Country]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of Country"
+                      externalMetadataColumnId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COUNTRY]"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Country]" />
+                    <inputColumn
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of City]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of City"
+                      externalMetadataColumnId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CITY]"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]" />
+                    <inputColumn
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of State]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of State"
+                      externalMetadataColumnId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STATE]"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of State]" />
+                    <inputColumn
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Region]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of Region"
+                      externalMetadataColumnId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[REGION]"
+                      lineageId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Region]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[ROWID]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ROWID]"
                       dataType="i4"
                       name="ROWID" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[ORDER_ID]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ORDER_ID]"
                       dataType="wstr"
                       length="50"
                       name="ORDER_ID" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[ORDER_DATE]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ORDER_DATE]"
                       dataType="dbDate"
                       name="ORDER_DATE" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[SHIP_DATE]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SHIP_DATE]"
                       dataType="dbDate"
                       name="SHIP_DATE" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[SHIP_MODE]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SHIP_MODE]"
                       dataType="wstr"
                       length="50"
                       name="SHIP_MODE" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[CUSTOMER_ID]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CUSTOMER_ID]"
                       dataType="wstr"
                       length="50"
                       name="CUSTOMER_ID" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[PRODUCT_ID]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PRODUCT_ID]"
                       dataType="wstr"
                       length="50"
                       name="PRODUCT_ID" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[QUANTITY]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[QUANTITY]"
                       dataType="i4"
                       name="QUANTITY" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[CUSTOMER_NAME]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CUSTOMER_NAME]"
                       dataType="wstr"
                       length="50"
                       name="CUSTOMER_NAME" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[SEGMENT]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SEGMENT]"
                       dataType="wstr"
                       length="50"
                       name="SEGMENT" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[CATEGORY]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CATEGORY]"
                       dataType="wstr"
                       length="50"
                       name="CATEGORY" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[SUB_CATEGORY]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SUB_CATEGORY]"
                       dataType="wstr"
                       length="50"
                       name="SUB_CATEGORY" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[PRODUCT_NAME]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PRODUCT_NAME]"
                       dataType="nText"
                       name="PRODUCT_NAME" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[SALES]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SALES]"
                       dataType="i4"
                       name="SALES" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[DISCOUNT]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DISCOUNT]"
                       dataType="r8"
                       name="DISCOUNT" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[PROFIT]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PROFIT]"
                       dataType="r8"
                       name="PROFIT" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[POSTAL_CODE]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[POSTAL_CODE]"
                       dataType="i4"
                       name="POSTAL_CODE" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[COUNTRY]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COUNTRY]"
                       dataType="wstr"
                       length="50"
                       name="COUNTRY" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[CITY]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CITY]"
                       dataType="wstr"
                       length="50"
                       name="CITY" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[STATE]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STATE]"
                       dataType="wstr"
                       length="50"
                       name="STATE" />
                     <externalMetadataColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input].ExternalColumns[REGION]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[REGION]"
                       dataType="wstr"
                       length="50"
                       name="REGION" />
@@ -1593,22 +1614,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Read All CSV Files\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Read All CSV Files\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Read All CSV Files\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Read All CSV Files\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1619,15 +1640,15 @@
           </components>
           <paths>
             <path
-              refId="Package\201901_Orders_2019_02_01_03_10_55.Paths[Data Conversion Output]"
-              endId="Package\201901_Orders_2019_02_01_03_10_55\To Staging.Inputs[OLE DB Destination Input]"
+              refId="Package\Read All CSV Files.Paths[Data Conversion Output]"
+              endId="Package\Read All CSV Files\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
-              startId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Outputs[Data Conversion Output]" />
+              startId="Package\Read All CSV Files\Data Conversion.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\201901_Orders_2019_02_01_03_10_55.Paths[Flat File Source Output]"
-              endId="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion.Inputs[Data Conversion Input]"
+              refId="Package\Read All CSV Files.Paths[Flat File Source Output]"
+              endId="Package\Read All CSV Files\Data Conversion.Inputs[Data Conversion Input]"
               name="Flat File Source Output"
-              startId="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source.Outputs[Flat File Source Output]" />
+              startId="Package\Read All CSV Files\Multi Flat files.Outputs[Flat File Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1646,51 +1667,55 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="268,42"
-          Id="Package\201901_Orders_2019_02_01_03_10_55"
-          TopLeft="53.5,33.5" />
+          Size="164,42"
+          Id="Package\Read All CSV Files"
+          TopLeft="85,46" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\201901_Orders_2019_02_01_03_10_55">
+    design-time-name="Package\Read All CSV Files">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="130,42"
-          Id="Package\201901_Orders_2019_02_01_03_10_55\To Staging"
-          TopLeft="371,238" />
+          Size="144,42"
+          Id="Package\Read All CSV Files\Multi Flat files"
+          TopLeft="146,52" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Read All CSV Files\OLE DB Destination"
+          TopLeft="400,210" />
         <NodeLayout
           Size="156,42"
-          Id="Package\201901_Orders_2019_02_01_03_10_55\Data Conversion"
-          TopLeft="214,133" />
+          Id="Package\Read All CSV Files\Data Conversion"
+          TopLeft="248,133" />
         <EdgeLayout
-          Id="Package\201901_Orders_2019_02_01_03_10_55.Paths[Data Conversion Output]"
-          TopLeft="292,175">
+          Id="Package\Read All CSV Files.Paths[Flat File Source Output]"
+          TopLeft="218,94">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="144,63"
+              EndConnector="108,39"
               Start="0,0"
-              End="144,55.5">
+              End="108,31.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.5" />
+                    End="0,15.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,27.5"
-                    Point2="0,31.5"
-                    Point3="4,31.5" />
+                    Point1="0,15.5"
+                    Point2="0,19.5"
+                    Point3="4,19.5" />
                   <mssgle:LineSegment
-                    End="140,31.5" />
+                    End="104,19.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="140,31.5"
-                    Point2="144,31.5"
-                    Point3="144,35.5" />
+                    Point1="104,19.5"
+                    Point2="108,19.5"
+                    Point3="108,23.5" />
                   <mssgle:LineSegment
-                    End="144,55.5" />
+                    End="108,31.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1699,36 +1724,32 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="151,42"
-          Id="Package\201901_Orders_2019_02_01_03_10_55\Flat File Source"
-          TopLeft="88,45" />
         <EdgeLayout
-          Id="Package\201901_Orders_2019_02_01_03_10_55.Paths[Flat File Source Output]"
-          TopLeft="163.5,87">
+          Id="Package\Read All CSV Files.Paths[Data Conversion Output]"
+          TopLeft="326,175">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="128.5,46"
+              EndConnector="159.5,35"
               Start="0,0"
-              End="128.5,38.5">
+              End="159.5,27.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19" />
+                    End="0,13.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19"
-                    Point2="0,23"
-                    Point3="4,23" />
+                    Point1="0,13.5"
+                    Point2="0,17.5"
+                    Point3="4,17.5" />
                   <mssgle:LineSegment
-                    End="124.5,23" />
+                    End="155.5,17.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="124.5,23"
-                    Point2="128.5,23"
-                    Point3="128.5,27" />
+                    Point1="155.5,17.5"
+                    Point2="159.5,17.5"
+                    Point3="159.5,21.5" />
                   <mssgle:LineSegment
-                    End="128.5,38.5" />
+                    End="159.5,27.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1741,7 +1762,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\201901_Orders_2019_02_01_03_10_55\To Staging">
+    design-time-name="Package\Read All CSV Files\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
